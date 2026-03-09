@@ -8,7 +8,7 @@ class PhotoReportApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Photo Report App',
+      title: 'Reporte Fotográfico',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -22,10 +22,10 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Photo Report'),
+        title: Text('Reporte Fotográfico'),
       ),
       body: Center(
-        child: Text('Welcome to the Photo Report App!'),
+        child: Text('¡Sí! Me puedes pasar todo el código.'),
       ),
     );
   }
