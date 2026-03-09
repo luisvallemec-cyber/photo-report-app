@@ -1,14 +1,27 @@
-// category.dart
-
 class Category {
   final String id;
   final String name;
-  final List<Category> subcategories;
+  final String? parentId;
 
-  Category({required this.id, required this.name, this.subcategories = const []});
+  Category({
+    required this.id,
+    required this.name,
+    this.parentId,
+  });
 
-  // Example method to add a subcategory
-  void addSubcategory(Category subcategory) {
-    subcategories.add(subcategory);
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'parent_id': parentId,
+    };
+  }
+
+  factory Category.fromMap(Map<String, dynamic> map) {
+    return Category(
+      id: map['id'] as String,
+      name: map['name'] as String,
+      parentId: map['parent_id'] as String?,
+    );
   }
 }
